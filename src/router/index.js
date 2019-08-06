@@ -4,7 +4,7 @@ import PostList from "../components/PostList"
 import Article from '../components/Article'
 import UserInfo from  '../components/UserInfo'
 import SlideBar from "../components/SlideBar";
-import Elite from '../components/Elite'
+
 
 Vue.use(Router)
 
@@ -32,12 +32,19 @@ export default new Router({
                 main: UserInfo
             }
         },
+        // {
+        //     name: 'elite_content',
+        //     path: '/elite/', // 指定要跳转的路径
+        //     components: {    // 指定要跳转的组件
+        //         main: Elite
+        //     }
+        // },
         {
-            name: 'elite_content',
-            path: '/elite/', // 指定要跳转的路径
-            components: {    // 指定要跳转的组件
-                main: Elite
+            name: 'tab',
+            path: '/:tab',
+            components: {
+              main: PostList
             }
-        },
+        }
     ]
 })
